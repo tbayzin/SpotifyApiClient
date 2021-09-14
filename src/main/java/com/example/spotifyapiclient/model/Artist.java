@@ -1,6 +1,21 @@
+
+/*
 package com.example.spotifyapiclient.model;
 
+import org.springframework.data.annotation.Id;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Artist")
 public class Artist {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String name;
     private Integer popularity;
@@ -48,3 +63,4 @@ public class Artist {
         this.uri = uri;
     }
 }
+*/
