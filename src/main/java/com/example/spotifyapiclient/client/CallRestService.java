@@ -17,11 +17,12 @@ public class CallRestService implements CommandLineRunner {
         private String apikey;
 
 
-    private static void CallRestService () {
+    private  void CallRestService () {
 
+        System.out.println(this.apikey);
         RestTemplate restTemplate = new RestTemplate();
 
-        HashMap<String, Object> artist = restTemplate.getForObject ("https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",HashMap.class);
+        HashMap<String, Object> artist = restTemplate.getForObject ("https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02" + apikey,HashMap.class);
 
         System.out.println("Artist is  " + artist.get("validity_checks"));
 
